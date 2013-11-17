@@ -10,8 +10,6 @@ namespace SKS_PDS.Services
 {
     public interface IRegionImportService
     {
-        private IRegionRepository _regionrepository;
-        public IRegionImportService(IRegionRepository regionrepository);
-        public void ImportRegion(string s);
+        void ImportRegion(string s);
     }
 }
