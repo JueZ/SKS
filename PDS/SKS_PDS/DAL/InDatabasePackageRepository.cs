@@ -35,7 +35,7 @@ namespace SKS_PDS.DAL
             {
 
                 var query = from d in _context.Packages
-                            where d.Warehouseid == warehouseid
+                            where d.Regionid == warehouseid
                             select d;
 
                 logger.Info("Exiting GetPackageByWareHouseID");
@@ -68,7 +68,7 @@ namespace SKS_PDS.DAL
                          where d.PackageID == item.PackageID
                          select d).FirstOrDefault();
 
-            query.Warehouseid = item.Warehouseid;
+            query.Regionid = item.Regionid;
 
             //_context.Packages.Attach(item);
             //_context.Entry(item).State = EntityState.Modified;

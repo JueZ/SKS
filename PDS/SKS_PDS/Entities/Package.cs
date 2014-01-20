@@ -13,8 +13,12 @@ namespace SKS_PDS.Entities
         private string _senderadress;
         private string _recipient;
         private string _recipientadress;
-        private int _warehouseid;
+        private int _regionid;
         private bool _delivered;
+        private string _city;
+        private string _country;
+        private string _postalcode;
+        private string _street;
 
         public int PackageID
         {
@@ -36,26 +40,46 @@ namespace SKS_PDS.Entities
         {
             get { return _recipientadress; }
         }
-        public int Warehouseid
+        public int Regionid
         {
-            get { return _warehouseid; }
-            set { _warehouseid = value; }
+            get { return _regionid; }
+            set { _regionid = value; }
         }
         public bool Delivered
         {
             get { return _delivered; }
             set { _delivered = value; }
         }
+        public string City
+        {
+            get { return _city; }
+        }
+        public string Country
+        {
+            get { return _country; }
+        }
+        public string Postalcode
+        {
+            get { return _postalcode; }
+        }
+        public string Street
+        {
+            get { return _street; }
+        }
 
-        public Package(int packageid, string sender, string senderadress, string recipient, string recipientadress, int warehousenumber)
+        public Package(int packageid, string sender, string senderadress, string recipient, string recipientadress, int warehousenumber, string city, string country, string postalcode, string street)
         {
             this._packageid = packageid;
             this._sender = sender;
             this._senderadress = senderadress;
             this._recipient = recipient;
             this._recipientadress = recipientadress;
-            this._warehouseid = warehousenumber;
+            this._regionid = warehousenumber;
             this._delivered = false;
+            this._city = city;
+            this._country = country;
+            this._postalcode = postalcode;
+            this._street = street;
         }
     }
 }

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\DataControllLayer.cs" />
     <Compile Include="DAL\InDatabasePackageRepository.cs" />
     <Compile Include="DAL\InDatabaseRegionRepository.cs" />
     <Compile Include="DAL\InDatabaseWarehouseRepository.cs" />
@@ -59,9 +60,11 @@
     <Compile Include="DAL\IPackageRepository.cs" />
     <Compile Include="DAL\IRegionRepository.cs" />
     <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\ISortPackage.cs" />
     <Compile Include="DAL\IWarehouseRepository.cs" />
     <Compile Include="DAL\MockableDbSetWithIQueryable.cs" />
     <Compile Include="DAL\PDSDatabase.cs" />
+    <Compile Include="DAL\SortPackage.cs" />
     <Compile Include="Entities\Package.cs" />
     <Compile Include="Entities\Region.cs" />
     <Compile Include="Entities\Warehouse.cs" />
@@ -80,9 +83,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

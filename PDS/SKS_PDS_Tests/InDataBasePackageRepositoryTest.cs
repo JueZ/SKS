@@ -25,7 +25,7 @@ namespace SKS_PDS_Tests
             var repostitory = new InDatabasePackageRepository(mockContext.Object);
 
             // act
-            repostitory.Add(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1));
+            repostitory.Add(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1, "City", "Country", "1010", "Street"));
             
             // assert
             mockSet.Verify(m => m.Add(It.IsAny<Package>()), Times.Once());
@@ -41,8 +41,8 @@ namespace SKS_PDS_Tests
             var repostitory = new InDatabasePackageRepository(mockContext.Object);
 
             // act
-            repostitory.Add(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1));
-            repostitory.Delete(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1));
+            repostitory.Add(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1, "City", "Country", "1010", "Street"));
+            repostitory.Delete(new Package(1, "Test", "TestAdress", "Recipient", "TestAdress", 1, "City", "Country", "1010", "Street"));
 
             // assert
             mockSet.Verify(m => m.Remove(It.IsAny<Package>()), Times.Once());
@@ -55,9 +55,9 @@ namespace SKS_PDS_Tests
             // Arrange
             var data = new List<Package>
             {
-                new Package(1, "S", "SA", "R", "RA", 1),
-                new Package(2, "S", "SA", "R", "RA", 1),
-                new Package(3, "S", "SA", "R", "RA", 2),
+                new Package(1, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(2, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(3, "S", "SA", "R", "RA", 2, "City", "Country", "1010", "Street"),
             }.AsQueryable();
 
             var mockContext = new Mock<PDSDatabase>();
@@ -85,9 +85,9 @@ namespace SKS_PDS_Tests
             // Arrange
             var data = new List<Package>
             {
-                new Package(1, "S", "SA", "R", "RA", 1),
-                new Package(2, "S", "SA", "R", "RA", 1),
-                new Package(3, "S", "SA", "R", "RA", 2),
+                new Package(1, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(2, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(3, "S", "SA", "R", "RA", 2, "City", "Country", "1010", "Street"),
             }.AsQueryable();
 
             var mockContext = new Mock<PDSDatabase>();
@@ -102,12 +102,12 @@ namespace SKS_PDS_Tests
             var repostitory = new InDatabasePackageRepository(mockContext.Object);
 
             // Act
-            repostitory.Update(new Package(2, "S", "SA", "R", "RA", 2));
+            repostitory.Update(new Package(2, "S", "SA", "R", "RA", 2, "City", "Country", "1010", "Street"));
 
             var packages = repostitory.GetById(2);
 
             // Assert
-            Assert.AreEqual(2, packages.Warehouseid);
+            Assert.AreEqual(2, packages.Regionid);
         }
 
         [TestMethod]
@@ -116,9 +116,9 @@ namespace SKS_PDS_Tests
             // Arrange
             var data = new List<Package>
             {
-                new Package(1, "S", "SA", "R", "RA", 1),
-                new Package(2, "S", "SA", "R", "RA", 1),
-                new Package(3, "S", "SA", "R", "RA", 2),
+                new Package(1, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(2, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(3, "S", "SA", "R", "RA", 2, "City", "Country", "1010", "Street"),
             }.AsQueryable();
 
             var mockContext = new Mock<PDSDatabase>();
@@ -145,9 +145,9 @@ namespace SKS_PDS_Tests
             // Arrange
             var data = new List<Package>
             {
-                new Package(1, "S", "SA", "R", "RA", 1),
-                new Package(2, "S", "SA", "R", "RA", 1),
-                new Package(3, "S", "SA", "R", "RA", 2),
+                new Package(1, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(2, "S", "SA", "R", "RA", 1, "City", "Country", "1010", "Street"),
+                new Package(3, "S", "SA", "R", "RA", 2, "City", "Country", "1010", "Street"),
             }.AsQueryable();
 
             var mockContext = new Mock<PDSDatabase>();

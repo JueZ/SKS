@@ -15,9 +15,9 @@ namespace SKS_PDS_Tests
         {
             // arrange
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
-            
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
-            inmemorypackagerepository.Add(new Package(2, "Name", "Adress", "Receiver", "TargetAdress", 1));
+
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
+            inmemorypackagerepository.Add(new Package(2, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // act
             List<Package> packagelist = inmemorypackagerepository.getPackageByWarehouseid(1);
@@ -33,7 +33,7 @@ namespace SKS_PDS_Tests
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
 
             // act
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // assert
             List<Package> packagelist = (List<Package>)inmemorypackagerepository.GetAll();
@@ -46,10 +46,10 @@ namespace SKS_PDS_Tests
         {
             // arrange
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // act
-            inmemorypackagerepository.Update(new Package(1, "NewName", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Update(new Package(1, "NewName", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // assert
             Assert.AreEqual(inmemorypackagerepository.GetById(1).Sender, "NewName");
@@ -60,10 +60,10 @@ namespace SKS_PDS_Tests
         {
             // arrange
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // act
-            inmemorypackagerepository.Delete(new Package(1, "NewName", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Delete(new Package(1, "NewName", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // assert
             Assert.IsNull(inmemorypackagerepository.GetById(1));
@@ -74,7 +74,7 @@ namespace SKS_PDS_Tests
         {
             // arrange
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // act
             Package package = inmemorypackagerepository.GetById(1);
@@ -88,8 +88,8 @@ namespace SKS_PDS_Tests
         {
             // arrange
             InMemoryPackageRepository inmemorypackagerepository = new InMemoryPackageRepository();
-            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1));
-            inmemorypackagerepository.Add(new Package(2, "Name", "Adress", "Receiver", "TargetAdress", 1));
+            inmemorypackagerepository.Add(new Package(1, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
+            inmemorypackagerepository.Add(new Package(2, "Name", "Adress", "Receiver", "TargetAdress", 1, "City", "Country", "1010", "Street"));
 
             // act
             List<Package> packagelist = (List<Package>)inmemorypackagerepository.GetAll();

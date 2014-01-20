@@ -23,7 +23,7 @@ namespace SKS_PDS.DAL
 
             foreach (Package package in _packages)
             {
-                if (package.Warehouseid == warehouseid)
+                if (package.Regionid == warehouseid)
                 {
                     packages.Add(package);
                 }
