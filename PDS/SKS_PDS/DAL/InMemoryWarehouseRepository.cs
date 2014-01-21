@@ -72,7 +72,7 @@ namespace SKS_PDS.DAL
             return null;
         }
 
-        public IEnumerable<Warehouse> GetAll()
+        public List<Warehouse> GetAll()
         {
             return _warehouses;
         }

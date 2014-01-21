@@ -17,7 +17,7 @@ namespace SKS_PDS.Services
             ServiceEndpoint ep = _host.AddServiceEndpoint(typeof(IWebService), new WebHttpBinding(), "");
 
             ServiceDebugBehavior sdb = _host.Description.Behaviors.Find<ServiceDebugBehavior>();
-            sdb.HttpHelpPageEnabled = false;
+            sdb.HttpHelpPageEnabled = true;
         }
 
         public void StartService()

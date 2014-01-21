@@ -12,6 +12,6 @@ namespace SKS_PDS.DAL
         void Update(T item);
         void Delete(T item);
         T GetById(int id);
-        IEnumerable<T> GetAll();
+        List<T> GetAll();
     } 
 }

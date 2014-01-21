@@ -105,7 +105,7 @@ namespace SKS_PDS.DAL
                 return (Package)query;
         }
 
-        public IEnumerable<Package> GetAll()
+        public List<Package> GetAll()
         {
             logger.Info("Entering GetAll");
             logger.Info("Exiting GetAll");

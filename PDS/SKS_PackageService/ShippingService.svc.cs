@@ -22,7 +22,6 @@ namespace SKS_PackageService
 
             DataControllLayer datacontrolllayer = new DataControllLayer();
             datacontrolllayer.AddPackage(importpackage);
-            
         }
     }
 }

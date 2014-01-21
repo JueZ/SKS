@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace SKS_PDS.Entities
         private float _x;
         private float _y;
 
+        [Key]
         public int Warehouseid
         {
             get { return _warehouseid; }
@@ -28,6 +30,10 @@ namespace SKS_PDS.Entities
         {
             get { return _y; }
             set { _y = value; }
+        }
+
+        public Warehouse()
+        {
         }
 
         public Warehouse(int warehouseid, float x, float y)

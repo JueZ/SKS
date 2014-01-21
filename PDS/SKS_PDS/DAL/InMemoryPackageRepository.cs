@@ -72,7 +72,7 @@ namespace SKS_PDS.DAL
             return null;
         }
 
-        public IEnumerable<Entities.Package> GetAll()
+        public List<Entities.Package> GetAll()
         {
             return _packages;
         }

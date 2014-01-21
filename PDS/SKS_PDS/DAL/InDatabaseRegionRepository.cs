@@ -94,7 +94,7 @@ namespace SKS_PDS.DAL
             return (Region)query;
         }
 
-        public IEnumerable<Region> GetAll()
+        public List<Region> GetAll()
         {
             logger.Info("Entering GetAll");
             logger.Info("Exiting GetAll");

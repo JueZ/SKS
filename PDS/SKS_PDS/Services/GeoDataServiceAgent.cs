@@ -43,7 +43,7 @@ namespace SKS_PDS.Services
 
             XmlNode locationElement = xmlDoc.SelectSingleNode("//rest:Point", nsmgr);
 
-            return new double[] { Convert.ToDouble(locationElement.SelectSingleNode(".//rest:Latitude", nsmgr).InnerText), Convert.ToDouble(locationElement.SelectSingleNode(".//rest:Longitude", nsmgr).InnerText) };
+            return new double[] { Convert.ToDouble(locationElement.SelectSingleNode(".//rest:Latitude", nsmgr).InnerText.Replace('.', ',')), Convert.ToDouble(locationElement.SelectSingleNode(".//rest:Longitude", nsmgr).InnerText.Replace('.', ',')) };
         }
     }
 }

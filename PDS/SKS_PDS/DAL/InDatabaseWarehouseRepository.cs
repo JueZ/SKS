@@ -70,7 +70,7 @@ namespace SKS_PDS.DAL
             return (Warehouse)query;
         }
 
-        public IEnumerable<Warehouse> GetAll()
+        public List<Warehouse> GetAll()
         {
             return _context.Warehouses.ToList<Warehouse>();
         }

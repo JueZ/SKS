@@ -32,6 +32,27 @@ namespace SKS_PDS.Services
             logger.Debug("Initialisiert");
         }
 
+        public void ImportRegion(RegionData regionData)
+        {
+            logger.Info("Entering ImportRegion");
+            logger.Debug(regionData);
+                
+
+                Random rnd = new Random();
+
+                foreach (RegionDataRegion regiondata in regionData.Region)
+                {
+                    double[] coords = _geodataserviceagent.EncodeCoordinates(regiondata.Address.PostalCode, regiondata.Address.City, regiondata.Address.Street);
+
+                    Region region = new Region(rnd.Next(1, 1000000000), regiondata.Key, regiondata.DisplayName, regiondata.Address.PostalCode, regiondata.Address.City, coords[0], coords[1]);
+
+                    _regionrepository.Add(region);
+                }
+
+            logger.Info("Exiting ImportRegion");
+        }
+
+
         public void ImportRegion(string s)
         {
             logger.Info("Entering ImportRegion");

@@ -12,11 +12,11 @@ namespace SKS_PDS.Services
     {
         private RegionImportService _regionimportservice = new RegionImportService(new InDatabaseRegionRepository(new PDSDatabase()));
 
-        public string SaveRegions(string s)
+        public bool SaveRegions(RegionData regionData)
         {
-            _regionimportservice.ImportRegion(s);
+            _regionimportservice.ImportRegion(regionData);
 
-            return s;
+            return true;
         }
     }
 }

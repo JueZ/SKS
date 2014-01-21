@@ -10,12 +10,9 @@ namespace SKS_PDS.Services
     [ServiceContract]
     public interface IWebService
     {
-        //[OperationContract]
-        //[WebGet]
-        //string SaveRegions(string s);
-
         [OperationContract]
-        [WebInvoke]
-        string SaveRegions(string s);
+        [XmlSerializerFormat]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "saveregions")]
+        bool SaveRegions(RegionData regionData);
     }
 }

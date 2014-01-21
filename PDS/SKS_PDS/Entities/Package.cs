@@ -4,82 +4,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
+
 namespace SKS_PDS.Entities
 {
     public class Package
     {
-        private int _packageid;
-        private string _sender;
-        private string _senderadress;
-        private string _recipient;
-        private string _recipientadress;
-        private int _regionid;
-        private bool _delivered;
-        private string _city;
-        private string _country;
-        private string _postalcode;
-        private string _street;
-
+        [Key]
         public int PackageID
         {
-            get { return _packageid; }
+            get;
+            set;
         }
         public string Sender
         {
-            get { return _sender; }
+            get;
+            set;
         }
         public string SenderAdress
         {
-            get { return _senderadress; }
+            get;
+            set;
         }
         public string Recipient
         {
-            get { return _recipient; }
+            get;
+            set;
         }
         public string RecipientAdress
         {
-            get { return _recipientadress; }
+            get;
+            set;
         }
         public int Regionid
         {
-            get { return _regionid; }
-            set { _regionid = value; }
+            get;
+            set;
         }
         public bool Delivered
         {
-            get { return _delivered; }
-            set { _delivered = value; }
+            get;
+            set;
         }
         public string City
         {
-            get { return _city; }
+            get;
+            set;
         }
         public string Country
         {
-            get { return _country; }
+            get;
+            set;
         }
         public string Postalcode
         {
-            get { return _postalcode; }
+            get;
+            set;
         }
         public string Street
         {
-            get { return _street; }
+            get;
+            set;
+        }
+
+        public Package()
+        {
         }
 
         public Package(int packageid, string sender, string senderadress, string recipient, string recipientadress, int warehousenumber, string city, string country, string postalcode, string street)
         {
-            this._packageid = packageid;
-            this._sender = sender;
-            this._senderadress = senderadress;
-            this._recipient = recipient;
-            this._recipientadress = recipientadress;
-            this._regionid = warehousenumber;
-            this._delivered = false;
-            this._city = city;
-            this._country = country;
-            this._postalcode = postalcode;
-            this._street = street;
+            PackageID = packageid;
+            Sender = sender;
+            SenderAdress = senderadress;
+            Recipient = recipient;
+            RecipientAdress = recipientadress;
+            Regionid = warehousenumber;
+            Delivered = false;
+            City = city;
+            Country = country;
+            Postalcode = postalcode;
+            Street = street;
         }
     }
 }
