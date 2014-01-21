@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://sksPackage.org/2013/ShippingService" elementFormDefault="qualified" targetNamespace="http://sksPackage.org/2013/ShippingService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1416/ShippingService.svc?xsd=xsd2" namespace="http://schema.sksPackage.org/2013/ShippingService" />
+  <xs:element name="AddPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schema.sksPackage.org/2013/ShippingService" minOccurs="0" name="package" nillable="true" type="q1:Package" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPackageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

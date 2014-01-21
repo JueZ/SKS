@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf82cdb9-35b3-40c1-b85a-990957ac83b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1416/ShippingService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShippingService.xsd" MetadataType="Schema" ID="46d10e50-a9e0-42d9-a638-592cac47ba5d" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShippingService1.xsd" MetadataType="Schema" ID="5890ec26-85b0-45e2-9fd5-aff534f61671" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ShippingService.wsdl" MetadataType="Wsdl" ID="f5688e74-40ec-412e-992b-f017063fc035" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?wsdl" />
+    <MetadataFile FileName="ShippingService1.wsdl" MetadataType="Wsdl" ID="29717b48-93ce-423b-b726-8cd4972239ab" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ShippingService.disco" MetadataType="Disco" ID="124e2798-eb43-4011-bcca-d473fcf3933f" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?disco" />
+    <MetadataFile FileName="ShippingService2.xsd" MetadataType="Schema" ID="87d0dc93-84fe-4996-86ad-32d96fec4bcf" SourceId="1" SourceUrl="http://localhost:1416/ShippingService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
